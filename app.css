@@ -1,0 +1,58 @@
+.header-container{
+    margin-top: 80px;
+    margin-bottom: 70px;
+}
+
+img {
+    border-radius: 50%;
+    height:70px;
+    width:70px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+  } 
+ 
+  p{
+    font-size: smaller;
+    margin-bottom: 1rem
+  }
+
+.table{
+    max-width: 300px;
+    max-height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title{
+ display: flex;
+ justify-content: center;
+}
+
+.calendar-month-container{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.month{
+    margin-right: 15px;
+}
+
+.btn-prev-arrow, .btn-next-arrow{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+    margin-right: 15px;
+    margin-bottom: 20px;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.active{
+    color: blueviolet;
+    background-color: aqua;
+}
