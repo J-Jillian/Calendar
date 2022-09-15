@@ -16,18 +16,36 @@ let monthNames = [
   "Diciembre",
 ];
 
+// let weekNames = [
+//   "Domingo",
+//   "Lunes",
+//   "Martes",
+//   "Miercoles",
+//   "Jueves",
+//   "Viernes",
+//   "Sabado",
+// ];
+
 //Import the Month class to create the calendar.
 
 // Get Date information from methods
 const currentDate = new Date();
-const currentDay = currentDate.getDay();
+const currentDay = currentDate.getDate();
 let numberMonth = currentDate.getMonth();
 let currentYear = currentDate.getFullYear();
+// const numberDayOfWeek = currentdate.getDay();
 
 let month = document.querySelector(".month");
 month.textContent = monthNames[numberMonth];
+console.log("✅ Month Number is working:", monthNames[numberMonth]);
 
-console.log("day", currentDay, numberMonth, currentYear);
+console.log(
+  "✅ Date is working:",
+  currentDate,
+  currentDay,
+  numberMonth,
+  currentYear
+);
 /*--------------------------DAYS------------------------*/
 let days = document.querySelector(".days");
 
@@ -59,16 +77,16 @@ const getTotalDays = (month) => {
 
 const writeMonth = (month) => {
   for (let i = startDay(); i > 0; i--) {
-    days.innerHTML += `<td class="calendar-day calendar-item">
+    days.innerHTML += `<div class="calendar-day calendar-item last-month-day">
         ${getTotalDays(numberMonth - 1) - (i - 1)}
-        </td>`;
+        </div>`;
   }
 
   for (let i = 1; i <= getTotalDays(month); i++) {
     if (i === currentDay) {
-      days.innerHTML += `<td class="calendar-day calendar-item today">${i}</td>`;
+      days.innerHTML += `<div class="calendar-day calendar-item today">${i}</div>`;
     } else {
-      days.innerHTML += `<td class="calendar-day calendar-item">${i}</td>`;
+      days.innerHTML += `<div class="calendar-day calendar-item">${i}</div>`;
     }
   }
 };

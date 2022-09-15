@@ -56,3 +56,35 @@ img {
     color: blueviolet;
     background-color: aqua;
 }
+
+.today{
+background-color: cadetblue;
+color: wheat;
+width: 100%;
+border-radius: 10%;
+
+}
+
+.calendar-container{
+    display: flex;
+    justify-content: center;
+}
+
+.calendar-days{
+    max-width: 300px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 20px;
+    row-gap: 15px;
+    margin: 5px;
+
+}
+
+.calendar-item{
+text-align: center;
+line-height: 2;
+}
+
+.last-month-day{
+    color: bisque;
+}
